@@ -1,0 +1,17 @@
+docker-compose -f docker-compose.yml up
+
+
+dotnet Middt.Sample.Ocelot.CustomerApi.dll --urls=http://localhost:1001
+dotnet Middt.Sample.Ocelot.CustomerApi.dll --urls=http://localhost:1002
+dotnet Middt.Sample.Ocelot.CustomerApi.dll --urls=http://localhost:1003
+
+
+dotnet Middt.Sample.Ocelot.ProductApi.dll --urls=http://localhost:2001
+dotnet Middt.Sample.Ocelot.ProductApi.dll --urls=http://localhost:2002
+dotnet Middt.Sample.Ocelot.ProductApi.dll --urls=http://localhost:2003
+
+http://localhost:1000/customer
+http://localhost:1000/product
+
+
+localhost:8500

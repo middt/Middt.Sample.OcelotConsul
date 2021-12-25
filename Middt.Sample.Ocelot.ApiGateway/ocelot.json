@@ -1,0 +1,27 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/customer",
+      "UpstreamPathTemplate": "/customer",
+      "ServiceName": "CustomerApi",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/product",
+      "UpstreamPathTemplate": "/product",
+      "ServiceName": "ProductApi",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    }
+  }
+}

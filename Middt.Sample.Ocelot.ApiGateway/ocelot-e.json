@@ -1,0 +1,31 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/customer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 1010
+        }
+      ],
+      "UpstreamPathTemplate": "/api/gateway/customer",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/product",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 1020
+        }
+      ],
+      "UpstreamPathTemplate": "/api/gateway/product",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:1000"
+  }
+}

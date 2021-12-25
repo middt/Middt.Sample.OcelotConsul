@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  consul:
+    image: "consul:latest"    
+    ports:
+      - "8500:8500"
+    
