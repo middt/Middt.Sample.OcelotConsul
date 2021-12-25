@@ -5,4 +5,3 @@ services:
     image: "consul:latest"    
     ports:
       - "8500:8500"
-    
